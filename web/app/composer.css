@@ -1,0 +1,86 @@
+.composer{max-width:1420px;margin:0 auto;padding:32px 44px 44px;color:#eff1e8;font-family:'Manrope',Inter,sans-serif;background:#111511;min-height:calc(100dvh - 64px)}
+.composer .composer-heading{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:30px}
+.composer .composer-back{font-size:12px;color:#a4ae99;text-decoration:none;display:inline-block;margin-bottom:24px}
+.composer .composer-back:hover{color:#d5f58d}
+.composer .composer-eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:#a5b58e;margin:0 0 12px}
+.composer h1{font-size:clamp(26px,3vw,40px);font-weight:500;line-height:1.2;letter-spacing:-1.5px;margin:0 0 12px}
+.composer .composer-intro{color:#a7b19e;font-size:13px;line-height:1.7;margin:0}
+.composer .composer-state{display:flex;align-items:center;gap:9px;white-space:nowrap;border:1px solid #394431;border-radius:30px;padding:10px 15px;font-size:9px;font-family:var(--mono);letter-spacing:.06em;color:#c4d5ad}
+.composer .composer-state>span{width:6px;height:6px;border-radius:50%;background:#d5f58d}
+.composer .composer-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);border:1px solid #343d2e;border-radius:18px;overflow:hidden;background:#171d16}
+.composer .composer-editor{padding:27px 30px 30px;min-width:0}
+.composer .composer-section-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:28px}
+.composer .composer-section-heading h2{font-size:15px;letter-spacing:-.35px;margin:0;font-weight:500}
+.composer .composer-section-heading>span{font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:#96a789;white-space:nowrap}
+.composer .composer-fields{border:0;padding:0;margin:0;min-width:0}
+.composer label{font-size:12px;color:#e0e7d7;font-weight:600;display:block;margin:0 0 9px}
+.composer label>span{font-size:10px;font-weight:400;color:#9fae94;margin-left:8px}
+.composer input,.composer textarea,.composer select{font:inherit;font-size:13px;color:#edf1e6;display:block;width:100%;max-width:100%;border:1px solid #3c4734;border-radius:8px;background:#111710;padding:12px 13px;line-height:1.6;outline:none;transition:border-color .15s,box-shadow .15s;box-sizing:border-box;color-scheme:dark}
+.composer input::placeholder,.composer textarea::placeholder{color:#8c9b81;opacity:1}
+.composer input:focus,.composer textarea:focus,.composer select:focus{border-color:#bbdc83;box-shadow:0 0 0 3px #d5f58d14}
+.composer textarea{resize:vertical;min-height:75px}
+.composer #composer-title{margin-bottom:23px}
+.composer #composer-body{min-height:214px;font-size:15px;line-height:1.8;padding:17px}
+.composer .composer-copy-label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:9px}
+.composer .composer-copy-label label{margin:0}
+.composer .composer-copy-label>span{font-family:var(--mono);font-size:10px;color:#9daf8c;font-variant-numeric:tabular-nums}
+.composer .composer-media-field{margin-top:25px}
+.composer .composer-media-field .composer-copy-label{flex-wrap:wrap}
+.composer .composer-hint{font-size:10px;color:#9daf8e;line-height:1.7;margin:9px 0 0;overflow-wrap:anywhere}
+.composer .composer-two-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:25px}
+.composer .composer-two-fields>div{min-width:0}
+.composer select{min-height:47px;cursor:pointer}
+.composer .composer-divider{height:1px;background:#303b29;margin:25px 0}
+.composer .composer-brand-fields{display:grid;gap:15px;border-left:2px solid #4c603a;padding-left:16px;margin-top:18px}
+.composer .composer-brand-fields .composer-hint{margin-top:-5px}
+.composer .composer-access{margin-top:24px;border-top:1px solid #33402c;padding-top:20px}
+.composer .composer-preview{background:#1d251a;border-left:1px solid #343d2e;padding:27px 30px;min-width:0}
+.composer .composer-preview-stage{border-radius:13px;background:radial-gradient(ellipse at 50% 40%,#3a4b29,transparent 75%),#232d1e;padding:32px 25px 24px;border:1px solid #3d4b32}
+.composer .composer-preview-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:10px;color:#bacba5;margin:0 2px 14px}
+.composer .composer-preview-caption>span:last-child{font-family:var(--mono);font-size:7px;letter-spacing:.08em}
+.composer .composer-social-card{color:#263020;background:#eff1e8;border:1px solid #ffffff80;border-radius:13px;box-shadow:0 20px 40px #0003;overflow:hidden;padding:23px;min-height:250px}
+.composer .composer-social-card header{display:flex;align-items:center;gap:10px}
+.composer .composer-brand-avatar{flex-shrink:0;display:grid;place-items:center;width:40px;height:40px;background:#304024;color:#d5f58d;border-radius:50%;font-weight:600;font-size:18px}
+.composer .composer-social-card header>div{min-width:0}
+.composer .composer-social-card strong{display:block;font-size:13px;overflow-wrap:anywhere}
+.composer .composer-social-card header>div>span{display:block;font-size:9px;color:#65715b;margin-top:4px;overflow-wrap:anywhere}
+.composer .composer-social-more{margin-left:auto;color:#66755c;align-self:flex-start;letter-spacing:2px;font-weight:bold}
+.composer .composer-social-copy{font-size:15px;line-height:1.85;white-space:pre-wrap;overflow-wrap:anywhere;margin:22px 0 25px;min-height:90px;max-height:440px;overflow-y:auto;scrollbar-width:thin}
+.composer .composer-placeholder{color:#7a8670}
+.composer .composer-social-footer{display:flex;justify-content:space-around;border-top:1px solid #d0d7c7;padding-top:14px;gap:12px;font-size:10px;color:#637357}
+.composer .composer-preview-disclaimer{font-size:9px;text-align:center;line-height:1.6;color:#b0c09d;margin:18px 0 0}
+.composer .composer-next{display:flex;gap:15px;margin-top:28px;padding:0 4px}
+.composer .composer-next-number{display:grid;place-items:center;flex-shrink:0;width:33px;height:33px;border:1px solid #62794b;border-radius:50%;color:#d5f58d;font-size:19px}
+.composer .composer-next h3{font-size:15px;font-weight:500;margin:3px 0 8px;letter-spacing:-.3px}
+.composer .composer-next p{font-size:11px;line-height:1.9;color:#afbea0;margin:0;max-width:320px}
+.composer .composer-summary{border-top:1px solid #38452e;margin-top:28px;padding:22px 4px;display:flex;flex-direction:column;gap:9px}
+.composer .composer-summary>span{font-family:var(--mono);font-size:8px;letter-spacing:.12em;color:#a1b58d}
+.composer .composer-summary>strong{font-size:13px;font-weight:500;color:#d4e3c1;overflow-wrap:anywhere}
+.composer .composer-revision-note{font-size:11px;color:#aabd98;line-height:1.8;border:1px dashed #48583b;padding:14px;border-radius:8px;margin:0}
+.composer .composer-actions{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0 0}
+.composer .composer-actions p{font-size:11px;line-height:1.7;color:#c4d2b4;margin:0 0 5px}
+.composer .composer-actions>div>span{font-size:9px;color:#9eae8f;line-height:1.8;display:block}
+.composer .composer-action-buttons{display:flex;gap:10px;flex-shrink:0}
+.composer .composer-button{display:inline-flex;align-items:center;justify-content:center;text-align:center;border:1px solid #64734f;border-radius:8px;padding:13px 17px;font:inherit;font-size:11px;font-weight:600;background:transparent;color:#dce7cc;text-decoration:none;cursor:pointer;min-height:44px;transition:background .15s,border-color .15s}
+.composer .composer-primary{background:#d5f58d;border-color:#d5f58d;color:#202916}
+.composer .composer-button:hover:not(:disabled){border-color:#e2ffa7;background:#303f25}
+.composer .composer-primary:hover:not(:disabled){color:#202916;background:#e2ffa7}
+.composer button:disabled,.composer fieldset:disabled{opacity:.55}
+.composer button:disabled{cursor:not-allowed}
+.composer :is(a,button):focus-visible{outline:2px solid #d5f58d;outline-offset:4px}
+.composer .composer-notice,.composer .composer-error{background:#372a20;border:1px solid #80634b;color:#f3d1b1;border-radius:10px;padding:17px 20px;font-size:12px;line-height:1.8;margin:0 0 22px}
+.composer .composer-error{margin:20px 0 0;color:#ffd3c7;background:#36231e;border-color:#915c4e}
+.composer .composer-error[hidden]{display:none}
+.composer .composer-error p{margin:5px 0 0}
+.composer .composer-error:focus{outline:2px solid #f29485;outline-offset:3px}
+.composer .composer-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.composer.composer-unavailable{padding-top:70px}
+.composer.composer-unavailable>p[role=alert]{max-width:650px;font-size:14px;line-height:1.8;color:#c0cbb4;margin:25px 0}
+@media(min-width:1400px){.composer .composer-preview-stage{margin-top:52px}}
+@media(max-width:1050px){.composer{padding:27px 25px}.composer .composer-editor,.composer .composer-preview{padding:24px}.composer .composer-preview-stage{padding:25px 17px}.composer .composer-actions{align-items:flex-start;flex-direction:column}.composer .composer-action-buttons{align-self:flex-end}}
+@media(max-width:760px){.composer{padding:24px 16px 32px}.composer .composer-heading{align-items:flex-start;gap:16px;flex-direction:column;margin-bottom:24px}.composer h1{letter-spacing:-1px}.composer .composer-back{margin-bottom:22px}.composer .composer-state{padding:7px 11px;font-size:8px}.composer .composer-grid{grid-template-columns:1fr}.composer .composer-preview{border-left:0;border-top:1px solid #343d2e}.composer .composer-editor,.composer .composer-preview{padding:22px 18px}.composer .composer-preview-stage{padding:25px 20px}.composer .composer-actions{gap:18px}.composer .composer-action-buttons{width:100%;align-self:stretch}.composer .composer-action-buttons button{flex:1;padding:12px 10px;font-size:10px}.composer .composer-social-copy{max-height:none}.composer label>span{font-size:9px}.composer .composer-next p{max-width:none}}
+@media(max-width:380px){.composer .composer-two-fields{grid-template-columns:1fr}.composer .composer-preview-stage{padding:20px 12px}.composer .composer-social-card{padding:18px}.composer .composer-action-buttons{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){.composer *{transition:none!important}}
+
+.composer select option{background:#1b2219;color:#eff1e8}
+.composer select option:checked{background:#354a23;color:#e8ffc1}
