@@ -50,3 +50,8 @@ Deploy `web/` to Vercel (root directory = `web`) with the same env vars. If you 
 - The crowd is batched (8 personas per model call) to fit free-tier rate limits. Agents in the same batch don't see each other; agents in later waves do see earlier ones.
 - Text only — media is described in a field, not seen.
 - The live-room buttons are unauthenticated in this demo; Studio actions use the real Sanity user.
+
+
+## Co-writing room (Yjs)
+
+The composer is a real-time co-writing room built on **Yjs**. You get live co-editing, remote carets and presence, margin notes anchored to words, per-user undo, and offline sync. Analyst risk flags open in the composer as pinned notes ("Fix together"). It needs no WebSocket server: updates go through Sanity, and SSE pushes them to other browsers. See [docs/COLLAB.md](docs/COLLAB.md). Run `cd web && npm test` to execute the resilience suite and the 18 co-writing tests offline.

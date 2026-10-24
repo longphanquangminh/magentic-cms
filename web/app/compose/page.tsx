@@ -1,15 +1,27 @@
+import {randomUUID} from 'node:crypto'
 import Link from 'next/link'
+import {redirect} from 'next/navigation'
 import {sanity, notDraft} from '@/lib/sanity'
+import {isRoomId, newDraftRoom, postRoom} from '@/lib/collab/protocol'
 import {isLiveDocumentId, type ComposerAudience, type ComposerBrand, type ComposerPost} from '@/lib/composerValidation'
 import PostComposer from '@/components/PostComposer'
 import '../composer.css'
+import '../collab.css'
 
 export const dynamic = 'force-dynamic'
 export const metadata = {title: 'Compose a post — MagenticCMS'}
 
-export default async function ComposePage({searchParams}: {searchParams: Promise<{post?: string | string[]}>}) {
+type Search = {post?: string | string[]; room?: string | string[]; flag?: string | string[]; why?: string | string[]}
+const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v)
+
+export default async function ComposePage({searchParams}: {searchParams: Promise<Search>}) {
   const params = await searchParams
   const postId = params.post
+  // A brand-new draft gets its own co-writing room in the URL, so the link itself is the invite.
+  const draftRoom = one(params.room)
+  if (postId === undefined && !(draftRoom?.startsWith('draft.') && isRoomId(draftRoom))) redirect(`/compose?room=${newDraftRoom(randomUUID())}`)
+  const flagPhrase = one(params.flag)?.slice(0, 300)
+  const flag = flagPhrase ? {phrase: flagPhrase, why: (one(params.why) || '').slice(0, 600)} : null
   let error: string | null = null
   let brands: ComposerBrand[] = []
   let audiences: ComposerAudience[] = []
@@ -36,5 +48,6 @@ export default async function ComposePage({searchParams}: {searchParams: Promise
       <p role="alert">{error}</p><Link className="composer-button" href="/compose">Open a new draft</Link>
     </main>
   )
-  return <PostComposer brands={brands} audiences={audiences} initialPost={post} accessCodeRequired={Boolean(process.env.DEMO_ACCESS_CODE)} />
+  const room = post ? postRoom(post._id, post.revision) : draftRoom!
+  return <PostComposer key={room} room={room} flag={flag} brands={brands} audiences={audiences} initialPost={post} accessCodeRequired={Boolean(process.env.DEMO_ACCESS_CODE)} />
 }

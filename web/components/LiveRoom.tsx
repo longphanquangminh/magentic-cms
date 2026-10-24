@@ -526,6 +526,11 @@ export default function LiveRoom({
                 <b>“{f.phrase}”</b>
                 <p className="small">{f.why}</p>
                 {f.brandMemory && <p className="small memory">📚 Brand memory: {f.brandMemory}</p>}
+                {post.revision === run?.revision && stage !== 'published' && (
+                  <a className="fix-together" href={`/compose?post=${encodeURIComponent(post._id)}&flag=${encodeURIComponent(f.phrase)}&why=${encodeURIComponent(f.why || '')}`}>
+                    ✎ Fix together in the co-writing room →
+                  </a>
+                )}
               </div>
             ))}
             {a.suggestedRevision && (
