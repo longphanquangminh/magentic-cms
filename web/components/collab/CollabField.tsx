@@ -38,6 +38,8 @@ export default function CollabField(props: Props) {
   const deferred = useRef<any[][]>([])
   const [, setLayoutTick] = useState(0)
   const value = useYText(ytext)
+  const onSelectionRef = useRef(onSelection)
+  onSelectionRef.current = onSelection
 
   // initial value + remote changes
   useLayoutEffect(() => {
@@ -55,7 +57,10 @@ export default function CollabField(props: Props) {
       for (const delta of deltas) { start = transformIndex(start, delta); end = transformIndex(end, delta) }
       const {scrollTop, scrollLeft} = node
       node.value = next
-      if (focused) node.setSelectionRange(Math.min(start, next.length), Math.min(end, next.length))
+      start = Math.min(start, next.length); end = Math.min(end, next.length)
+      if (focused) node.setSelectionRange(start, end)
+      // keep the parent's copy of the selection (used for "Note on …") aligned with the moved text
+      onSelectionRef.current?.(start, end)
       node.scrollTop = scrollTop
       node.scrollLeft = scrollLeft
     }

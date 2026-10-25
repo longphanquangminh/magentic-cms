@@ -74,7 +74,7 @@
 .composer .notes-head h3 span{font:500 9px/1 var(--mono);color:#96a789;letter-spacing:.08em;margin-left:8px;text-transform:uppercase}
 .composer .notes-head button{border:0;background:none;color:#a7b89a;font-size:10.5px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .composer .notes-empty{font-size:11px;line-height:1.7;color:#8c9b81;margin:0}
-.composer .notes-list{list-style:none;margin:0;padding:0;display:grid;gap:10px;max-height:420px;overflow:auto;scrollbar-width:thin;scrollbar-color:#415134 transparent}
+.composer .notes-list{list-style:none;margin:0;padding:0 4px 0 0;overflow-x:hidden;display:grid;gap:10px;max-height:420px;overflow:auto;scrollbar-width:thin;scrollbar-color:#415134 transparent}
 .composer .note-card{border-left:3px solid var(--c);background:#192017;border-radius:0 10px 10px 0;padding:11px 12px;font-size:12px;transition:background .15s,transform .15s;animation:note-in .2s ease-out}
 .composer .note-card.is-focus{background:#1f281c;transform:translateX(2px)}
 .composer .note-card.is-resolved{opacity:.55}
